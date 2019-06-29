@@ -31,6 +31,7 @@ import java.util.Date
 import java.util.GregorianCalendar
 import java.util.Locale
 import java.util.regex.Pattern
+import java.io.Serializable
 
 /**
  * An [RFC 6265](http://tools.ietf.org/html/rfc6265) Cookie.
@@ -40,7 +41,7 @@ import java.util.regex.Pattern
  *
  * [chromium_extension]: https://code.google.com/p/chromium/issues/detail?id=232693
  */
-class Cookie private constructor(
+class Cookie private constructor : Serializable (
   /** Returns a non-empty string with this cookie's name. */
   @get:JvmName("name") val name: String,
 
